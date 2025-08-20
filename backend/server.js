@@ -10,9 +10,9 @@ import chatRoutes from "./routes/chat.route.js"
 import { connectDB } from "./lib/db.js";
 const app = express();
 const PORT = process.env.PORT;
-
+const frontendURL = process.env.FRONTEND_URL;
 app.use(cors({
-    origin: "https://chattr-app-1gs2.vercel.app",
+    origin: frontendURL,
     credentials: true //to allow cookies to be sent to frontend
 }))
 
